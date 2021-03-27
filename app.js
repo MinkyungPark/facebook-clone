@@ -66,7 +66,7 @@ app.use(express.static("public"));
 
 /* MongoDB Connection */
 mongoose
-    .connect(process.env.MONGODB_URI + "/facebook_clone", { //mongodb://127.0.0.1:27017
+    .connect(process.env.MONGODB_URI, { //mongodb://127.0.0.1:27017/facebook_clone
         useNewUrlParser: true,
         useCreateIndex: true,
         useUnifiedTopology: true
