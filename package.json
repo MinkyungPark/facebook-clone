@@ -5,7 +5,12 @@
   "main": "app.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production PORT=3000 node app.js",
-    "dev": "npx nodemon app.js"
+    "dev": "npx nodemon app.js",
+    "heroku-postbuild": "npm run build"
+  },
+  "engines": {
+    "node": "12.19.0",
+    "npm": "6.14.11"
   },
   "author": "",
   "license": "ISC",
