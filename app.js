@@ -14,7 +14,6 @@ const User = require("./models/User");
 const helmet = require('helmet');
 const hpp = require('hpp');
 
-const host = "0.0.0.0";
 const port = process.env.PORT || 3000;
 const onlineChatUsers = {};
 
@@ -91,7 +90,7 @@ app.use((req, res, next) => {
 app.use("/", userRoutes);
 app.use("/", postRoutes);
 
-const server = app.listen(port, host, () => {
+const server = app.listen(port, () => {
     winston.info(`App is running on port ${port}`);
 });
 
